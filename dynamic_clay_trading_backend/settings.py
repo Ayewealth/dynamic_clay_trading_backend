@@ -39,8 +39,8 @@ else:
 
 if ENVIRONMENT == "production" or POSTGRES_LOCALLY == True:
     ALLOWED_HOSTS = ['localhost', '127.0.0.1',
-                     'dynamic-clay-trading.vercel.app']
-    CSRF_TRUSTED_ORIGINS = ["https://dynamic-clay-trading.vercel.app/"]
+                     'dynamic-clay-trading.vercel.app', 'dynamic-clay-trading.onrender.com']
+    CSRF_TRUSTED_ORIGINS = ["https://dynamic-clay-trading.onrender.com/"]
 else:
     ALLOWED_HOSTS = ["*"]
 
