@@ -39,7 +39,7 @@ else:
 
 if ENVIRONMENT == "production" or POSTGRES_LOCALLY == True:
     ALLOWED_HOSTS = ['localhost', '127.0.0.1',
-                     'dynamic-clay-trading.vercel.app', 'dynamic-clay-trading.onrender.com']
+                     'dynamic-clay-trading.vercel.app', 'dynamic-clay-trading.onrender.com', "dynamicclaytrading.com"]
     CSRF_TRUSTED_ORIGINS = ["https://dynamic-clay-trading.onrender.com/"]
 else:
     ALLOWED_HOSTS = ["*"]
@@ -186,7 +186,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://dynamic-clay-trading.vercel.app"
+    "https://dynamic-clay-trading.vercel.app",
+    "https://www.dynamicclaytrading.com"
 ]
 
 LOGGING = {
