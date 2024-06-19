@@ -20,6 +20,7 @@ if ENVIRONMENT == 'production' or POSTGRES_LOCALLY:
         connections = ConnectionHandler(settings.DATABASES)
         db_conn = connections['default']
         database_url = f"postgresql://{db_conn.settings_dict['USER']}:{db_conn.settings_dict['PASSWORD']}@{db_conn.settings_dict['HOST']}:{db_conn.settings_dict['PORT']}/{db_conn.settings_dict['NAME']}"
+        print(database_url)
 
     # Using PostgreSQL as job store
     jobstores = {

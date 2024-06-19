@@ -94,6 +94,13 @@ class WalletListApiView(generics.ListAPIView):
     serializer_class = WalletSerializer
 
 
+class WalletRetriveUpdateDestroyApiView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Wallet.objects.all()
+    serializer_class = WalletSerializer
+    lookup_field = 'pk'
+
+
+
 class InvestmentListCreateApiView(generics.ListCreateAPIView):
     queryset = Investment.objects.all()
     serializer_class = InvestmentSerializer

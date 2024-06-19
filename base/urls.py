@@ -23,6 +23,8 @@ urlpatterns = [
          views.UserProfileRetriveUpdateDestroyApiView.as_view(), name="user-profile-crud"),
 
     path('wallets/', views.WalletListApiView.as_view(), name='wallets'),
+    path('wallets/<str:pk>/',
+         views.WalletRetriveUpdateDestroyApiView.as_view(), name='wallets-details'),
     path('investment/', views.InvestmentListCreateApiView.as_view(), name='investment'),
     path('investment_sub/', views.InvestmentSubscriptionListCreateApiView.as_view(),
          name='investment_sub'),
